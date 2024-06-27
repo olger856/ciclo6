@@ -6,7 +6,6 @@ import 'package:evento_c6_app/src/pages/cruds/evento/EventoList.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
 import 'dart:math' as math;
 
 import 'package:snippet_coder_utils/hex_color.dart';

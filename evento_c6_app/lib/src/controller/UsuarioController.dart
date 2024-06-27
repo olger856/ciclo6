@@ -106,7 +106,7 @@ class UsuarioController {
     var url = ConfigApi.buildUrl('/auth/delete/$a');
 
     // Verifica si la fotoURL no es nula ni vacía antes de intentar eliminarla
-    if (fotoURL != null && fotoURL.isNotEmpty) {
+    if (fotoURL.isNotEmpty) {
       // Elimina la foto de Firebase Storage
       await FirebaseStorage.instance.refFromURL(fotoURL).delete();
     }

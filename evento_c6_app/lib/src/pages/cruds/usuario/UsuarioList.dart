@@ -9,12 +9,10 @@ import 'package:evento_c6_app/src/controller/UsuarioController.dart';
 import 'package:evento_c6_app/src/pages/cruds/usuario/CreateUsuario.dart';
 import 'package:evento_c6_app/src/pages/cruds/usuario/DetalleUsuarioo.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:snippet_coder_utils/hex_color.dart';
-import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 
 class UsuarioList extends StatefulWidget {
