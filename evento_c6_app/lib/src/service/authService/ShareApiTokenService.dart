@@ -6,7 +6,6 @@ import 'package:evento_c6_app/src/model/auth/AuthResponseModel.dart';
 import 'package:flutter/material.dart';
 
 // import 'package:flutter_application_1/src/sql/ApiCacheDatabase.dart';
-import 'package:http/http.dart' as http;
 class ShareApiTokenService {
   static Future<bool> isLoggedIn() async {
     var isKeyExist = await APICacheManager().isAPICacheKeyExist("login_details");

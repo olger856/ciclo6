@@ -3,7 +3,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.Mariategui.asistencia.dto.AuthUser;
 import com.Mariategui.asistencia.entity.Asistencia;
-import com.Mariategui.asistencia.entity.AsistenciaDetalle;
 import com.Mariategui.asistencia.entity.Evento;
 import com.Mariategui.asistencia.feign.AuthUserFeign;
 import com.Mariategui.asistencia.repository.AsistenciaRepository;

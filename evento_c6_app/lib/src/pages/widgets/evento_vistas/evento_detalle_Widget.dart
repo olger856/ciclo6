@@ -4,7 +4,6 @@ import 'package:evento_c6_app/src/config/theme.dart';
 import 'package:evento_c6_app/src/pages/widgets/evento_vistas/evento_Widget2.dart';
 import 'package:evento_c6_app/src/pages/widgets/navbar/evento_nav.dart';
 import 'package:expandable_text/expandable_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:provider/provider.dart';
