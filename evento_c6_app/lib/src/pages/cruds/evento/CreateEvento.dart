@@ -1,24 +1,21 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:evento_c6_app/src/controller/EventoController.dart';
 import 'package:evento_c6_app/src/pages/cruds/evento/EventoList.dart';
-
 import 'package:flutter/material.dart';
-
 import 'package:firebase_storage/firebase_storage.dart';
-
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-
 class CreateEvento extends StatefulWidget {
   @override
   State<CreateEvento> createState() => _CreateEventoState();
 }
-
 class _CreateEventoState extends State<CreateEvento> {
   EventoController eventoController = EventoController();
   final TextEditingController userIdController = TextEditingController();
   final TextEditingController nombreController = TextEditingController();
+  final TextEditingController seccionController = TextEditingController();
+  final TextEditingController tipoController = TextEditingController();
   final TextEditingController fecha_inicioController = TextEditingController();
   final TextEditingController fecha_finController = TextEditingController();
 
@@ -28,12 +25,10 @@ class _CreateEventoState extends State<CreateEvento> {
       context,
       MaterialPageRoute(builder: (context) => EventoList()),
     );
-
     if (result != null && result) {
       setState(() {});
     }
   }
-
   Future<void> _pickImage() async {
     final imagePicker = ImagePicker();
     final image = await imagePicker.pickImage(source: ImageSource.gallery);
@@ -45,7 +40,6 @@ class _CreateEventoState extends State<CreateEvento> {
       // El Evento no seleccionó una imagen, puedes mostrar un mensaje de error.
     }
   }
-
   Future<String?> _uploadImage() async {
     if (selectedImage != null) {
       final firebaseStorageReference =
@@ -57,11 +51,9 @@ class _CreateEventoState extends State<CreateEvento> {
       return null; // Devuelve null en caso de que la imagen no se cargue.
     }
   }
-
   Future<void> _getImage() async {
     final picker = ImagePicker();
     final pickedFile = await picker.pickImage(source: ImageSource.gallery);
-
     if (pickedFile != null) {
       // Aquí puedes procesar la imagen seleccionada.
       // Por ejemplo, puedes mostrarla en la interfaz de Evento.
@@ -72,11 +64,13 @@ class _CreateEventoState extends State<CreateEvento> {
       // El Evento canceló la selección.
     }
   }
-
 // Add this function to validate fields
   bool _validateFields() {
     if (userIdController.text.isEmpty ||
         nombreController.text.isEmpty ||
+        seccionController.text.isEmpty ||
+        selectedTipo == null ||
+        selectedTipo!.isEmpty ||
         fecha_inicioController.text.isEmpty ||
         fecha_finController.text.isEmpty) {
       // Show a modal indicating that all fields must be filled.
@@ -103,6 +97,12 @@ class _CreateEventoState extends State<CreateEvento> {
     return true;
   }
 
+  String?
+      selectedTipo; // Debes definir esta variable para almacenar el rol seleccionado
+  List<String> tipos = [
+    'publico',
+    'privado',
+  ]; // Definir la lista de roles
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +110,6 @@ class _CreateEventoState extends State<CreateEvento> {
         title: Text('Crear Evento'),
       ),
       // drawer: MyDrawer(accountName: "Evento"),
-
       body: BounceInRight(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -132,6 +131,36 @@ class _CreateEventoState extends State<CreateEvento> {
                     labelText: 'Nombre',
                     hintText: 'Nombre del Evento',
                     icon: Icon(Icons.person_add),
+                  ),
+                ),
+                 SizedBox(height: 16.0),
+                TextFormField(
+                  controller: seccionController,
+                  decoration: InputDecoration(
+                    labelText: 'Seccion',
+                    hintText: 'Seccion del Evento',
+                    icon: Icon(Icons.person_add),
+                  ),
+                ),
+                SizedBox(height: 16.0),
+                  DropdownButtonFormField<String>(
+                  value: selectedTipo,
+                  onChanged: (String? newValue) {
+                    // Aquí puedes manejar el cambio de valor seleccionado
+                    setState(() {
+                      selectedTipo = newValue;
+                    });
+                  },
+                  items: tipos.map((String tipo) {
+                    return DropdownMenuItem<String>(
+                      value: tipo,
+                      child: Text(tipo),
+                    );
+                  }).toList(),
+                  decoration: InputDecoration(
+                    labelText: 'Tipo',
+                    hintText: 'Selecciona un Tipo para el evento',
+                    icon: Icon(Icons.category_outlined),
                   ),
                 ),
                 SizedBox(height: 16.0),
@@ -199,6 +228,8 @@ class _CreateEventoState extends State<CreateEvento> {
                         await eventoController.crearEvento(
                           userIdController.text.trim(),
                           nombreController.text.trim(), // Nombre
+                          seccionController.text.trim(), // Nombre
+                          selectedTipo ?? "",
                           fecha_inicioController.text.trim(), // Contraseña
                           fecha_finController.text.trim(), // Código
                           downloadUrl ?? "", // URL de la imagen

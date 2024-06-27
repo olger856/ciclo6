@@ -13,10 +13,10 @@ packages:
     dependency: transitive
     description:
       name: _flutterfire_internals
-      sha256: a315d1c444402c3fa468de626d33a1c666041c87e9e195e8fb355b7084aefcc1
+      sha256: "0816f12bbbd9e21f72ea8592b11bce4a628d4e5cb7a81ff9f1eee4f3dc23206e"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.38"
+    version: "1.3.37"
   android_path_provider:
     dependency: "direct main"
     description:
@@ -97,6 +97,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
+  clippy_flutter:
+    dependency: "direct main"
+    description:
+      name: clippy_flutter
+      sha256: f63f487afe1233f7189f83154aa9f4903dddda61687b5b81ce4955250c133a07
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0-nullsafety.1"
   clock:
     dependency: transitive
     description:
@@ -137,6 +145,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  expandable_text:
+    dependency: "direct main"
+    description:
+      name: expandable_text
+      sha256: "7d03ea48af6987b20ece232678b744862aa3250d4a71e2aaf1e4af90015d76b1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
   fake_async:
     dependency: transitive
     description:
@@ -197,10 +213,10 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_core
-      sha256: "1e06b0538ab3108a61d895ee16951670b491c4a94fce8f2d30e5de7a5eca4b28"
+      sha256: fae4ab4317c2a7afb13d44ef1e3f9f28a630e10016bc5cfe761e8e6a0ed7816a
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.1"
+    version: "3.1.0"
   firebase_core_platform_interface:
     dependency: transitive
     description:
@@ -221,26 +237,26 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_storage
-      sha256: "01fdcef335d2c86a265e9eb3c5b3b489ddc5589e7fc18a74df84b31be9f0c15b"
+      sha256: "594f593551a20c1de68663414965b6ec4909f9a6bde8e6b1dac240ce779de947"
       url: "https://pub.dev"
     source: hosted
-    version: "12.1.0"
+    version: "12.0.1"
   firebase_storage_platform_interface:
     dependency: transitive
     description:
       name: firebase_storage_platform_interface
-      sha256: "8fdbfc63af3441434f33a420a304a670b464ff71b8f12fccc80accba1378ca3b"
+      sha256: "505dbaa4bceab07216c4e26cb1480bdb69ca03ab59bb7cb63f4681e2f7d5b23e"
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.25"
+    version: "5.1.24"
   firebase_storage_web:
     dependency: transitive
     description:
       name: firebase_storage_web
-      sha256: bb9a387ae26bf7358e118f191ee22167b30217cad551184592cc73e7f73bd470
+      sha256: d3e6f27be96c7ebdf38a43520f19584e55dc45c71f616aa86f135dba97d63a8e
       url: "https://pub.dev"
     source: hosted
-    version: "3.9.10"
+    version: "3.9.9"
   fixnum:
     dependency: transitive
     description:
@@ -278,6 +294,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.20"
+  flutter_rating_bar:
+    dependency: "direct main"
+    description:
+      name: flutter_rating_bar
+      sha256: d2af03469eac832c591a1eba47c91ecc871fe5708e69967073c043b2d775ed93
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.1"
   flutter_speed_dial:
     dependency: "direct main"
     description:

@@ -1,10 +1,10 @@
-
 import 'package:evento_c6_app/src/component/Actualizar.dart';
 import 'package:evento_c6_app/src/config/theme.dart';
 import 'package:evento_c6_app/src/pages/auth/LoginPage.dart';
 import 'package:evento_c6_app/src/pages/auth/RegisterPage.dart';
 import 'package:evento_c6_app/src/pages/cruds/evento/EventoList.dart';
 import 'package:evento_c6_app/src/pages/cruds/usuario/UsuarioList.dart';
+import 'package:evento_c6_app/src/pages/inicio_evento.dart';
 import 'package:evento_c6_app/src/service/authService/ShareApiTokenService.dart';
 import 'package:evento_c6_app/src/view/AdminHomePage.dart';
 import 'package:evento_c6_app/src/view/HomePage.dart';
@@ -13,14 +13,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-
-
 Widget _defaultHome = const LoginPage();
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-
+ 
   await Firebase.initializeApp(
     // ignore: prefer_const_constructors
     options: FirebaseOptions(
@@ -54,7 +50,6 @@ void main() async {
   );
   // MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -81,6 +76,8 @@ class MyApp extends StatelessWidget {
         '/user_home': (context) => UserHomePage(),
         '/usuario': (context) => const UsuarioList(),
         '/evento': (context) => const EventoList(),
+        //VISTA_ALUMNO
+        '/evento-alumno': (context) =>  InicioEvento(),
 
       },
       // home: CategoriaList(),
