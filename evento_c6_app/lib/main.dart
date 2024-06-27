@@ -1,3 +1,4 @@
+
 import 'package:evento_c6_app/src/component/Actualizar.dart';
 import 'package:evento_c6_app/src/config/theme.dart';
 import 'package:evento_c6_app/src/pages/auth/LoginPage.dart';
@@ -18,7 +19,7 @@ Widget _defaultHome = const LoginPage();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
- 
+
   await Firebase.initializeApp(
     // ignore: prefer_const_constructors
     options: FirebaseOptions(

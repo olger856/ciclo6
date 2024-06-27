@@ -146,6 +146,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                         Navigator.of(context).pushNamed('/evento');
                       },
                     ),
+
                     const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'reserva_crud',
