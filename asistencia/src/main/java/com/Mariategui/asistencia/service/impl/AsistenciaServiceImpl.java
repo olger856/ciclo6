@@ -1,6 +1,8 @@
 package com.Mariategui.asistencia.service.impl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.Mariategui.asistencia.dto.AuthUser;
 import com.Mariategui.asistencia.entity.Asistencia;
 import com.Mariategui.asistencia.entity.Evento;
@@ -14,22 +16,29 @@ import feign.FeignException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 @Service
 public class AsistenciaServiceImpl implements AsistenciaService {
+
     @Autowired
     private AuthUserFeign authUserFeign;
+
     @Autowired
     private EventoServiceImpl eventoService;
+
     @Autowired
     private AsistenciaRepository asistenciaRepository;
+
     @Override
     public List<Asistencia> listar() {
         return asistenciaRepository.findAll();
     }
+
     @Override
     public Asistencia guardar(Asistencia asistencia) {
         return asistenciaRepository.save(asistencia);
     }
+
     @Override
     public Asistencia actualizar(Asistencia asistencia) {
         return asistenciaRepository.save(asistencia);

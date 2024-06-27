@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/olger856/ciclo6.git
+          uri: https://github.com/Guino-Elvis/APP_C6_FLUTTER.git
           search-paths: config-data
           default-label: main
   security:

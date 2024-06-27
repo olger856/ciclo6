@@ -1,4 +1,5 @@
 package com.Mariategui.asistencia.entity;
+
 import jakarta.persistence.*;
 
 import java.sql.Date;
@@ -8,6 +9,7 @@ import com.Mariategui.asistencia.dto.AuthUser;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
+
 @Entity
 @Data
 public class Asistencia {

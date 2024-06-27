@@ -104,12 +104,12 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                         Navigator.of(context).pushNamed('/evento-alumno');
                       },
                     ),
-                    const SizedBox(height: 16),
+                     const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Portal',
+                    text: 'Asistencias',
                     icon: Icons.school_outlined,
                     onTap: () {
-                      Navigator.of(context).pushNamed('/colegiohome');
+                      Navigator.of(context).pushNamed('/evento-alumno-asistencias');
                     },
                   ),
                     const SizedBox(height: 16),
@@ -146,7 +146,6 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                         Navigator.of(context).pushNamed('/evento');
                       },
                     ),
-
                     const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'reserva_crud',
@@ -157,10 +156,10 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                     ),
                     const SizedBox(height: 16),
                     buildMenuItem(
-                      text: 'Libro_Crud',
+                      text: 'Asistencia || Evento',
                       icon: CupertinoIcons.book_solid,
                       onTap: () {
-                        Navigator.of(context).pushNamed('/libro_crud');
+                        Navigator.of(context).pushNamed('/asistencia');
                       },
                     ),
                   ],

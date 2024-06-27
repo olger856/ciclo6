@@ -123,7 +123,7 @@ class InicioEvento extends StatelessWidget {
                                   ],
                                 ),
                               )
-
+                            
                             ],
                           ),
                         ),
@@ -225,7 +225,7 @@ class InicioEvento extends StatelessWidget {
                       ),
                     ),
                     EventoWidget2(),
-
+                   
                   ],
                 ),
               ),

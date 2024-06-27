@@ -1,7 +1,7 @@
 class ConfigApi {
   static const String appName = "Colegio";
   // static const String apiURL = "172.22.4.12:9090";
-  static const String apiURL = "192.168.1.86:9090";
+  static const String apiURL = "172.17.96.1:9090";
   static const String loginAPI = "/auth/login";
   static const String registerAPI = "/auth/create";
   static const String listUserAPI = "/auth/list";

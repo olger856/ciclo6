@@ -7,6 +7,9 @@ class EventoModel {
   String? fecha_inicio;
   String? fecha_fin;
   String? foto;
+
+
+
   EventoModel(
       {this.id,
       this.userId,
@@ -16,7 +19,9 @@ class EventoModel {
       this.fecha_inicio,
       this.fecha_fin,
       this.foto,
+
       });
+
   EventoModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     userId = json['userId'];
@@ -27,6 +32,7 @@ class EventoModel {
     fecha_fin = json['fecha_fin'];
     foto = json['foto'];
   }
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;

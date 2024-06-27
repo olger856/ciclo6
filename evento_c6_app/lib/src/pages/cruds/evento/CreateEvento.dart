@@ -1,15 +1,20 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:evento_c6_app/src/controller/EventoController.dart';
 import 'package:evento_c6_app/src/pages/cruds/evento/EventoList.dart';
+
 import 'package:flutter/material.dart';
+
 import 'package:firebase_storage/firebase_storage.dart';
+
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
+
 class CreateEvento extends StatefulWidget {
   @override
   State<CreateEvento> createState() => _CreateEventoState();
 }
+
 class _CreateEventoState extends State<CreateEvento> {
   EventoController eventoController = EventoController();
   final TextEditingController userIdController = TextEditingController();
@@ -25,10 +30,12 @@ class _CreateEventoState extends State<CreateEvento> {
       context,
       MaterialPageRoute(builder: (context) => EventoList()),
     );
+
     if (result != null && result) {
       setState(() {});
     }
   }
+
   Future<void> _pickImage() async {
     final imagePicker = ImagePicker();
     final image = await imagePicker.pickImage(source: ImageSource.gallery);
@@ -40,6 +47,7 @@ class _CreateEventoState extends State<CreateEvento> {
       // El Evento no seleccionó una imagen, puedes mostrar un mensaje de error.
     }
   }
+
   Future<String?> _uploadImage() async {
     if (selectedImage != null) {
       final firebaseStorageReference =
@@ -51,9 +59,11 @@ class _CreateEventoState extends State<CreateEvento> {
       return null; // Devuelve null en caso de que la imagen no se cargue.
     }
   }
+
   Future<void> _getImage() async {
     final picker = ImagePicker();
     final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+
     if (pickedFile != null) {
       // Aquí puedes procesar la imagen seleccionada.
       // Por ejemplo, puedes mostrarla en la interfaz de Evento.
@@ -64,6 +74,7 @@ class _CreateEventoState extends State<CreateEvento> {
       // El Evento canceló la selección.
     }
   }
+
 // Add this function to validate fields
   bool _validateFields() {
     if (userIdController.text.isEmpty ||
@@ -110,6 +121,7 @@ class _CreateEventoState extends State<CreateEvento> {
         title: Text('Crear Evento'),
       ),
       // drawer: MyDrawer(accountName: "Evento"),
+
       body: BounceInRight(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
