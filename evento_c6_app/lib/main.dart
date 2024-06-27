@@ -20,6 +20,7 @@ Widget _defaultHome = const LoginPage();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+
   await Firebase.initializeApp(
     // ignore: prefer_const_constructors
     options: FirebaseOptions(
