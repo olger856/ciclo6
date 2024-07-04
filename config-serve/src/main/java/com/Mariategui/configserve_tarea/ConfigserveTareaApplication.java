@@ -3,7 +3,7 @@ package com.Mariategui.configserve_tarea;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
-
+//avances
 @SpringBootApplication
 @EnableConfigServer
 public class ConfigserveTareaApplication {
