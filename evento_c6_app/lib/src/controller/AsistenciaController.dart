@@ -1,7 +1,9 @@
+import 'package:android_path_provider/android_path_provider.dart';
 import 'package:evento_c6_app/src/config/ConfigApi.dart';
 import 'package:evento_c6_app/src/service/authService/ShareApiTokenService.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:io';
 
 class AsistenciaController {
   Future<List<dynamic>> getDataListAsistencia() async {

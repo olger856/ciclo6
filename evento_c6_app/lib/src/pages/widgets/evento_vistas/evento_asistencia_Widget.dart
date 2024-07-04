@@ -480,12 +480,12 @@ class _AsistenciaAlumnoState extends State<AsistenciaAlumno> {
               );
             },
             style: ButtonStyle(
-              shape: WidgetStateProperty.resolveWith(
+              shape: MaterialStateProperty.resolveWith(
                 (states) => RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              backgroundColor: WidgetStateProperty.resolveWith(
+              backgroundColor: MaterialStateProperty.resolveWith(
                 (states) => themeProvider.isDiurno
                     ? HexColor("#F82249")
                     : themeColors[0],

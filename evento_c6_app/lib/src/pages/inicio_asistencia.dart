@@ -1,7 +1,14 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:evento_c6_app/src/config/theme.dart';
+import 'package:evento_c6_app/src/controller/AsistenciaController.dart';
 import 'package:evento_c6_app/src/pages/inicio_asistencia_detalle.dart';
+import 'package:evento_c6_app/src/pages/inicio_evento.dart';
+import 'package:evento_c6_app/src/pages/widgets/evento_vistas/evento_asistencia_detalle_Widget.dart';
+import 'package:evento_c6_app/src/pages/widgets/evento_vistas/evento_detalle_Widget.dart';
+import 'package:evento_c6_app/src/service/authService/ShareApiTokenService.dart';
 import 'package:flutter/material.dart';
 
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:snippet_coder_utils/hex_color.dart';
 

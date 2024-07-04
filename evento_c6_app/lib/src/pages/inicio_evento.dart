@@ -4,7 +4,9 @@ import 'package:evento_c6_app/src/config/theme.dart';
 import 'package:evento_c6_app/src/pages/widgets/evento_vistas/evento_Widget.dart';
 import 'package:evento_c6_app/src/pages/widgets/evento_vistas/evento_Widget2.dart';
 import 'package:evento_c6_app/src/pages/widgets/navBarInicio.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:provider/provider.dart';
 import 'package:snippet_coder_utils/hex_color.dart';

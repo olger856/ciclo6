@@ -22,7 +22,6 @@ class ShareApiTokenService {
 
       return authResponseJson(cacheData.syncData);
     }
-    return null;
   }
 
   static Future<void> setLoginDetails(

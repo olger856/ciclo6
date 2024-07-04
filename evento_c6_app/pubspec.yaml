@@ -51,6 +51,8 @@ dependencies:
   clippy_flutter: ^2.0.0-nullsafety.1
   expandable_text: ^2.3.0
   flutter_rating_bar: ^4.0.1
+  googleapis: ^13.2.0
+  googleapis_auth: ^1.6.0
 
 dev_dependencies:
   flutter_test:

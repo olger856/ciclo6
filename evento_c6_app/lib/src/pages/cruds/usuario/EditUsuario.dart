@@ -104,9 +104,14 @@ class _EditUsuarioState extends State<EditUsuario> {
         await firebaseStorageReference.putFile(selectedImage!);
         final downloadUrl = await firebaseStorageReference.getDownloadURL();
 
-        newImageUrl =
-            downloadUrl; // Si se selecciona una nueva imagen, se actualiza la URL
-            } catch (e) {
+        if (downloadUrl != null) {
+          newImageUrl =
+              downloadUrl; // Si se selecciona una nueva imagen, se actualiza la URL
+        } else {
+          // Handle the case where downloadUrl is null (image upload failed)
+          // You might want to display an error message or use a default image URL.
+        }
+      } catch (e) {
         // Maneja el error, por ejemplo, muestra un mensaje al usuario
         print("Error al cargar la imagen: $e");
       }

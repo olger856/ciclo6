@@ -90,8 +90,12 @@ class _EditEventoState extends State<EditEvento> {
         await firebaseStorageReference.putFile(selectedImage!);
         final downloadUrl = await firebaseStorageReference.getDownloadURL();
 
-        newImageUrl = downloadUrl;
-            } catch (e) {
+        if (downloadUrl != null) {
+          newImageUrl = downloadUrl;
+        } else {
+          // Handle case where download URL is null
+        }
+      } catch (e) {
         print("Error uploading image: $e");
         // Handle error uploading image
       }
